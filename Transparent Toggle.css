@@ -1,0 +1,75 @@
+/*DOCTYPE CSS*/
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{
+	background-color: #DE8797;
+}
+
+.wrapper{
+	position: absolute;
+	top:20%;
+	left:50%;
+	transform: translate(-50px, 50px);
+}
+
+.switch-area{
+	position: relative;
+	display: inline-block;
+	width:100px;
+	height:40px;
+	border-radius:40px;
+	border:2px solid black;
+}
+
+.switch-area input{
+	opacity: 0;
+}
+
+.slider{
+	position: absolute;
+	cursor:pointer;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	-webkit-transition:.5s; /*for chorme*/
+}
+
+.slider:before{
+	position: absolute;
+	content:"";
+	width: 34px;
+	height:34px;
+	top:3px;
+	left:4px;
+	background-color: black;
+	-webkit-transition:.5s;
+}
+
+input:checked + .slider:before{
+	-webkit-transform:translateX(58px);
+	-ms-transform:translateX(58px);
+	transform:translateX(58px);
+}
+
+.slider.circle{
+	border-radius:40px;
+}
+
+.slider.circle:before{
+	border-radius:50%;
+}
+
+.sign{
+	width:80%;
+	position: absolute;
+	font:500 10px 'Rubik' sans-serif;
+	right:15px;
+	bottom:15px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	text-align:right ;
+}
